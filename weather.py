@@ -3,6 +3,12 @@ from flask_cors import CORS
 import requests
 
 app = Flask(__name__)
+CORS(app)    # Ensure CORS is enabled
+
+# Home route to test if the API is running
+@app.route('/')
+def home():
+    return jsonify({"message": "Weather API is live!"})
 
 # Your OpenWeatherMap API key
 api_key = '6dccae404f96466c4fde6c0a23d0c32c'
