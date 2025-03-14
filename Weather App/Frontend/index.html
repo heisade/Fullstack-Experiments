@@ -18,7 +18,7 @@
         async function fetchWeather() {
             const location = document.getElementById('location').value;
             try {
-                const response = await fetch(`http://127.0.0.1:5000/weather?location=${location}`);
+                const response = await fetch(`https://fullstack-experiments.onrender.com/weather?location=${location}`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
